@@ -1,0 +1,196 @@
+body {
+  background-image: url(../images/bg_repeat.png);
+  background-repeat: repeat-x;
+  margin: 0;
+  padding: 0;
+  background-color: #001b2d;
+}
+#logoDivWhite {
+  height: 50px;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+}
+
+#content,
+#header,
+#footer {
+  padding: 15px;
+  border-width: 1px;
+}
+
+#header {
+  background-color: #f1f5f9;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  min-height: 45px;
+}
+
+#dialog {
+  width: 98%;
+  max-width: 905px;
+  min-width: 335px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e7eef2;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #3a5160;
+  font-family: Helvetica, Arial;
+  font-size: 12px;
+  font-weight: normal;
+}
+#headerBorder {
+  height: 13px;
+  background-image: url(../images/devider_line.png);
+}
+
+#content {
+  min-width: 300px;
+  max-width: 845px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-top: 17px;
+  padding-right: 15px;
+  color: #3a5160;
+  line-height: 16px;
+  min-height: 290px;
+}
+h1 {
+  font-family: Helvetica, Arial;
+  font-size: 28px;
+  font-weight: normal;
+  color: #3e667b;
+  margin: 0;
+  padding: 0;
+}
+
+#guest-login .box {
+  height: 95px;
+}
+button {
+  width: 115px;
+  height: 35px;
+  margin-right: 15px;
+  margin-left: 15px;
+  background-image: url(../images/button_default.png);
+  background-color: Transparent;
+  border: 0;
+  color: #fff;
+}
+
+.right,
+.right-col {
+  float: right;
+}
+#guest-login #submit-login {
+  margin-top: 8px;
+}
+#content button {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+input[type="password"],
+input[type="text"] {
+  width: 210px;
+  height: 26px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #3e5765;
+  font-size: 12px;
+  border-color: #b1c3c7;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+}
+#guest-login #pwd {
+  margin-top: 5px;
+}
+@media all and (max-height: 529px) {
+  #content {
+    min-height: 0;
+  }
+}
+@media all and (max-width: 342px) {
+  #logoDivSetup {
+    background-size: contain;
+  }
+}
+@media all and (max-height: 530px) {
+  .centerContentImage {
+    margin-top: 0;
+  }
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.box {
+  padding: 8px;
+  background-color: #f1f5f8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c2cacf;
+  border-radius: 5px;
+}
+
+#leftContent {
+  max-width: 482px;
+  min-width: 300px;
+  float: left;
+}
+#centerDivider {
+  width: 30px;
+  height: 1px;
+  float: left;
+}
+
+#rightImageContent {
+  min-width: 300px;
+  max-width: 363px;
+  float: left;
+}
+#rightImageContent img {
+  float: right;
+}
+
+#clockdiv {
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+#clockdiv > div {
+  padding: 10px;
+  border-radius: 3px;
+  background: #00bf96;
+  display: inline-block;
+}
+
+#clockdiv div > span {
+  padding: 15px;
+  border-radius: 3px;
+  background: #00816a;
+  display: inline-block;
+}
+
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
+}

